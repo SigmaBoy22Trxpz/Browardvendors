@@ -18,7 +18,7 @@
             max-width: 1200px;
             margin: 20px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             padding: 20px;
         }
@@ -43,6 +43,20 @@
         .options {
             margin-top: 10px;
         }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+            .item {
+                padding: 8px;
+            }
+            .item p {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -52,13 +66,9 @@
             <p>Torch Pressure Blend THC-A HHC-P Vaporizer - 3500mg 50$</p>
             <div class="options">
                 <label><input type="radio" name="product1" value="Indica"> Black Cherry (I)</label><br>
-				
                 <label><input type="radio" name="product1" value="Hybrid"> White Strawberry Skunk (H)</label><br>
-				
                 <label><input type="radio" name="product1" value="Hybrid2"> PIneapple Powerhouse (H)</label>
-				
                 <label><input type="radio" name="product1" value="Sativa"> Blue Razz Haze (S)</label>
-				
                 <label><input type="radio" name="product1" value="Sativa2"> Zkittle Pop (S)</label>
             </div>
         </div>
@@ -72,12 +82,10 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://via.placeholder.com/200" alt="Image 3">
-            <p>Caption for Image 3</p>
+            <img src="https://everythingfor420.com/cdn/shop/files/cookies-triple-scoop-ni-thc-a-pre-roll-1000mg-37613812809807.jpg?v=1716398861&width=1445" alt="Image 3">
+            <p>Cookies Triple Scoop THC-A Pre-Roll - 1000mg</p>
             <div class="options">
-                <label><input type="radio" name="product3" value="Indica"> Indica</label><br>
-                <label><input type="radio" name="product3" value="Hybrid"> Hybrid</label><br>
-                <label><input type="radio" name="product3" value="Sativa"> Sativa</label>
+                <label><input type="radio" name="product3" value="Indica"> Hybrid</label><br>
             </div>
         </div>
         <div class="item">
