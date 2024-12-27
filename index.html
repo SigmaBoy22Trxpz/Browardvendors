@@ -9,16 +9,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             background-color: #f4f4f9;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 10px 0;
+            color: gray;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
         .gallery {
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            display: inline-flex;
             gap: 15px;
             padding: 20px;
         }
@@ -29,6 +36,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
         }
         .item img {
             max-width: 100%;
@@ -43,57 +51,51 @@
         .options {
             margin-top: 10px;
         }
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
-            .item {
-                padding: 8px;
-            }
-            .item p {
-                font-size: 12px;
-            }
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        Join the tele <a href="https://t.me/+ZOrer4UZG4UzNjZh" target="_blank">https://t.me/+ZOrer4UZG4UzNjZh</a>
+    </div>
     <div class="gallery">
         <div class="item">
             <img src="https://everythingfor420.com/cdn/shop/files/torch-pressure-blend-thc-a-vaporizer-3500mg-38123528912975.jpg?v=1726244868&width=1445" alt="Torch Pressure Blend THC-A Vaporizer">
             <p>Torch Pressure Blend THC-A HHC-P Vaporizer - 3500mg 50$</p>
             <div class="options">
-                <label><input type="radio" name="product1" value="Indica"> Black Cherry (I)</label><br>
-                <label><input type="radio" name="product1" value="Hybrid"> White Strawberry Skunk (H)</label><br>
-                <label><input type="radio" name="product1" value="Hybrid2"> PIneapple Powerhouse (H)</label>
+                <label><input type="radio" name="product1" value="Indica"> Black Cherry (I)</label>
+                <label><input type="radio" name="product1" value="Hybrid"> White Strawberry Skunk (H)</label>
+                <label><input type="radio" name="product1" value="Hybrid2"> Pineapple Powerhouse (H)</label>
                 <label><input type="radio" name="product1" value="Sativa"> Blue Razz Haze (S)</label>
                 <label><input type="radio" name="product1" value="Sativa2"> Zkittle Pop (S)</label>
             </div>
         </div>
         <div class="item">
-            <img src="https://everythingfor420.com/cdn/shop/files/half-bakd-sauced-exotix-honey-oz-cartridge-2000mg-38061277806671.jpg?v=1722457845&width=1445" alt="Image 2">
+            <img src="https://everythingfor420.com/cdn/shop/files/half-bakd-sauced-exotix-honey-oz-cartridge-2000mg-38061277806671.jpg?v=1722457845&width=1445" alt="Half Bakd Sauced Exotix Cartridge">
             <p>Half Bakd Sauced Exotix Cartridge - 2000mg 35$ Cartridge only</p>
             <div class="options">
-                <label><input type="radio" name="product2" value="Indica"> Peach Ringz (I)</label><br>
-                <label><input type="radio" name="product2" value="Hybrid"> Apple Jackd (H)</label><br>
+                <label><input type="radio" name="product2" value="Indica"> Peach Ringz (I)</label>
+                <label><input type="radio" name="product2" value="Hybrid"> Apple Jackd (H)</label>
                 <label><input type="radio" name="product2" value="Sativa"> Honey OZ (S)</label>
             </div>
         </div>
         <div class="item">
-            <img src="https://everythingfor420.com/cdn/shop/files/cookies-triple-scoop-ni-thc-a-pre-roll-1000mg-37613812809807.jpg?v=1716398861&width=1445" alt="Image 3">
+            <img src="https://everythingfor420.com/cdn/shop/files/cookies-triple-scoop-ni-thc-a-pre-roll-1000mg-37613812809807.jpg?v=1716398861&width=1445" alt="Cookies Triple Scoop THC-A Pre-Roll">
             <p>Cookies Triple Scoop THC-A Pre-Roll - 1000mg</p>
             <div class="options">
-                <label><input type="radio" name="product3" value="Indica"> Hybrid</label><br>
+                <label><input type="radio" name="product3" value="Hybrid"> Hybrid</label>
             </div>
+            <p>🍨 Cookies Brand<br>🍨 Top Shelf THC-A<br>🍨 Hybrid Strain<br>🍨 Lemon Cherry Gelato x Honey Bun genetics</p>
         </div>
         <div class="item">
             <img src="https://via.placeholder.com/200" alt="Image 4">
             <p>Caption for Image 4</p>
             <div class="options">
-                <label><input type="radio" name="product4" value="Indica"> Indica</label><br>
-                <label><input type="radio" name="product4" value="Hybrid"> Hybrid</label><br>
+                <label><input type="radio" name="product4" value="Indica"> Indica</label>
+                <label><input type="radio" name="product4" value="Hybrid"> Hybrid</label>
                 <label><input type="radio" name="product4" value="Sativa"> Sativa</label>
             </div>
         </div>
@@ -101,8 +103,8 @@
             <img src="https://via.placeholder.com/200" alt="Image 5">
             <p>Caption for Image 5</p>
             <div class="options">
-                <label><input type="radio" name="product5" value="Indica"> Indica</label><br>
-                <label><input type="radio" name="product5" value="Hybrid"> Hybrid</label><br>
+                <label><input type="radio" name="product5" value="Indica"> Indica</label>
+                <label><input type="radio" name="product5" value="Hybrid"> Hybrid</label>
                 <label><input type="radio" name="product5" value="Sativa"> Sativa</label>
             </div>
         </div>
@@ -110,8 +112,8 @@
             <img src="https://via.placeholder.com/200" alt="Image 6">
             <p>Caption for Image 6</p>
             <div class="options">
-                <label><input type="radio" name="product6" value="Indica"> Indica</label><br>
-                <label><input type="radio" name="product6" value="Hybrid"> Hybrid</label><br>
+                <label><input type="radio" name="product6" value="Indica"> Indica</label>
+                <label><input type="radio" name="product6" value="Hybrid"> Hybrid</label>
                 <label><input type="radio" name="product6" value="Sativa"> Sativa</label>
             </div>
         </div>
